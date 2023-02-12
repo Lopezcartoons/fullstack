@@ -1,0 +1,23 @@
+html{
+    background: #f7f7f7;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+header, footer{
+    background: #333a40;
+    color: white;
+}
+
+.products {
+    border: 1px solid grey;
+    width: 200px;
+    
+}
+img{
+    max-width: 100%;
+}
