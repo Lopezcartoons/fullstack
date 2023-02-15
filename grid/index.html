@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+       
+        #container{
+            display: grid;
+            background: lightblue;
+            /* grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+            grid-template-rows: repeat(3,[row-start] 1fr [row-end]); */
+
+            grid-template-areas:   "header header"
+                                    "Content sidebar"
+                                    "footer footer";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;;
+            grid-gap: 10px;
+           
+        }
+        .item{
+            background: lightcoral;
+            padding: 30px;
+        }
+
+        .item1{
+            background: lightcyan;
+             grid-row-start: row-start; 
+            grid-row-end: row-end 4;
+            grid-column-start: col-start;
+            grid-column-end: col-end 2; 
+            
+            /* grid-row: 1/2;
+            grid-column: 1/5; */
+            /* grid-area: 2/3/span 3/5; */
+        }
+        header{
+           grid-row: header;
+           grid-column: header; 
+        }
+        main{
+            grid-row: Content;
+            grid-column: Content;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1fr);
+        }
+
+        aside{
+            grid-row: sidebar;
+            grid-column: sidebar;
+        }
+
+        footer{
+            grid-row: footer;
+            grid-column: footer;
+        }
+
+        header, main, aside, footer{
+           border: 1px dashed;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <header>
+        Header
+      </header>
+      <main>
+        <div class="item" >Item 1</div>
+        <div class="item" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi accusamus deleniti culpa, veniam, dolorem ipsa ipsam mollitia optio nulla voluptatibus fugit nisi expedita qui ea minus voluptas blanditiis repudiandae perspiciatis?</div>
+        <div class="item" >Item 3</div>
+        <div class="item" >Item 4</div>
+        <div class="item" >Item 1</div>
+        <div class="item" >Item 2</div>
+        <div class="item" >Item 3</div>
+        <div class="item" >Item 4</div>
+        <div class="item" >Item 1</div>
+        <div class="item" >Item 2</div>
+        <div class="item" >Item 3</div>
+        <div class="item" >Item 4</div>
+      </main>
+      <aside>
+        Sidebar
+      </aside>
+      <footer>
+        Footer
+      </footer>
+       
+    </div>
+    
+</body>
+</html>
