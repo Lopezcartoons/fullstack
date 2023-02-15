@@ -79,7 +79,6 @@ p:first-of-type{
 /* product detail*/
 .product-details {
     width: 660px;
-
 }
 
 .product-details img {
@@ -161,6 +160,17 @@ tr:hover {
     header h1{
          width: 60%;
     }
+    .product-details{
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        align-items: baseline;
+    }
+    .product-details img {
+        max-width: 100%;
+
+    
+    }
 
 
     main {
@@ -180,6 +190,10 @@ aside{
 }
 
 @media(min-width: 1200px){
+   shopbox{
+    display: flex;
+    flex-direction: wrap;
+   }
     body{  
     max-width: 80vw;
 }
