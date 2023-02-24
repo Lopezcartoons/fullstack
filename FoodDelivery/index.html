@@ -20,14 +20,40 @@
             <li class="nav-item" ><a class="nav-link"  href="">Home</a></li>
             <li class="nav-item"><a  class="nav-link" href="">Locations</a></li>
           </ul>
-          <form action="">
-            <input type="text">
-            <button type="submit">Search</button>
+          <form  class="d-flex flex-row my-2 my-md-1" action="">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-success mx-2" type="submit">Search</button>
           </form>
         </div>
       </nav>
+      <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/slides_1.jpg" alt="First slide">
+            <div class="carousel-caption"> 
+              <h5>Made to order</h5>
+              <p>only the freshest ingredients</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/slides_2.jpg" alt="Second slide">
+            <div class="carousel-caption">
+              <h5> Over 50 types on our menu</h5>
+              <p>or build your own</p>
+            </div>
+          </div>
+        </div>
+        <a href="#carouselControls" class=carousel-control-prev role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a href="#carouselControls" class=carousel-control-next role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
     </header>
-  <div class="container text-center">
+  <div class="container text-center py-5">
     <div class="row">
       <div class="col-md-4">  
         <img class="rounded-circle" src="images/open.jpg" alt="food package">
@@ -47,8 +73,75 @@
         <p>Research backed foods and packaging to lower waste.</p>
         <p><a class="btn btn-secondary" href="" role="button">View Details &raquo;</a></p>
       </div>
-
     </div>
   </div>
+  <div class="container-fluid bg-dark">
+    <div class="row text-center">
+      <div class="col-md-7 text-light fst-italic">
+          <p>Sign up for exclusive offers</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal"> Sign up here</button>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="model-title">Sign up for exclusive offers</h5>
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!--
+            BOOSTRAP 5 inline form 
+            <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="nameInput" class="col-form-label">Name</label>
+            </div>
+            <div class="col-auto">
+              <input type="name" id="nameInput" class="form-control">
+            </div>
+            </div>
+          </div> -->
+
+          <form action="">
+            <div class="form-group">
+              <label for="nameInput">Your name</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" >
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Your email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" >
+            </div>
+            <div class="form-group">
+              <label for="address">Your address</label>
+              <textarea class="form-control " ame="" id="address" cols="3"  placeholder="Enter your address"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="emailCheck" value="option1">
+            <label class="form-check-label" for="emailCheck">Contact by email?</label> 
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="postCheck" value="option1">
+            <label class="form-check-label" for="postCheck">Contact by post?</label> 
+          </div>
+          <button type="submit" class="btn btnprimary">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <footer class="container bg-light py-4">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2023 Fresh Food Delivery &middot;
+      <a href="">Home</a> &middot;
+      <a href="">Locations</a> &middot;
+
+    </p>
+  </footer>
   </body>
 </html>

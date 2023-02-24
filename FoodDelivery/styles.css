@@ -2,3 +2,10 @@
     width: 140px;
     height: 140px;
 }
+
+#carouselControls .carousel-item img {  
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height:50vh;
+  }
