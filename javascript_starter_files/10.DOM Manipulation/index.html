@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+<p class="hello">Hello, <span id="userName">user</span></p>
+<p class="hello">Welcome Back</p>
+<img class="image" src="" alt="">
+<img class="image" src="" alt="">
+  <script>
+    // getElementById
+    var name  = "Lopezcartoons"
+    document.getElementById('userName').innerHTML = name;
+    document.getElementById('userName').style.fontSize = '24px';
+    // getElementsByClassName
+    var test = document.getElementsByClassName('hello')[1].style.color = 'purple';
+    console.log(test);
+
+    // getElementsByTagName
+    document.getElementsByTagName('p')[0].innerHTML = 'changed'
+
+    // querySelector
+    // document.querySelector('.image').setAttribute('src','image.jpg');
+        // querySelectorAll
+
+        document.querySelectorAll('.image')[0].setAttribute('src','image.jpg');
+        document.querySelectorAll('.image')[1].setAttribute('src','image.jpg');
+ 
+
+  </script>
+  
+</body>
+</html>

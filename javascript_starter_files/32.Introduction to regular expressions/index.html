@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to regular expressions</title>
+  <style>
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.2em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <p>Hot chicken jean shorts non, pickled waistcoat VHS sriracha stumptown velit blackbird spyplane mumblecore cloud bread. Freegan hell of lumbersexual, gluten-free banjo kombucha sed paleo swag gentrify culpa actually. 90's qui plaid typewriter in. 
+    Man bun small batch pickled ut. Mlk5hk adipisicing veniam kinfolk copper mug asymmetrical do, pork belly semiotics unicorn chillwave iPhone id photo booth actually. Bruh gastropub fit everyday carry, aesthetic lomo proident jean shorts iceland do typewriter.</p>
+  
+  <script>
+
+    let text = document.querySelector('p').innerHTML;
+
+    // returns the position of word in the string:
+    // let newText = text.search('amet');
+    
+    // Replace text with a string (case sensitive)
+    // let newText = text.replace('Lorem', 'chips');
+
+    // Replace text with a regular expression, i modifier to perform case insensitive match
+    // let newText = text.replace(/lorem/i, 'chips');
+
+    // i modifier = replaces first match only
+    // let newText = text.replace(/e/i, 'A');
+
+    // g modifier = replaces all matches
+    // let newText = text.replace(/a/g, ' Lopezcartoons ');
+
+    // Use square brackets to find any letter inside (first one only counts)
+    // let newText = text.replace(/[hgs]/, ' **Lopezcartoons** ');
+
+    // Add g modifier to select all from letters inside of sq brackets
+    // let newText = text.replace(/[hgs]/g, ' **Lopezcartoons** ');
+
+    // Use square brackets to find any number inside (first one only counts)
+    let newText = text.replace(/[3-6]/, ' **Lopezcartoons** ');
+
+
+    console.log(newText); 
+    
+  </script>
+</body>
+</html>
