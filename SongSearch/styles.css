@@ -1,0 +1,167 @@
+
+
+
+body {
+/* background-color:  #495867 ; */
+/* background-color: #262832; */
+/* background-color: #111; */
+background-color: #191919;
+
+font-family: 'Abel', sans-serif;
+color: white;
+}
+
+/*  Header */
+
+h1 {
+font-family: 'Lato', sans-serif;
+font-weight: 900;
+font-size: 3em;
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 2fr 0.1fr;
+align-items:center;
+padding: 10px;
+}
+
+header hr {
+grid-row: 2/3;
+grid-column: 1/span 2;
+width: 100%;
+}
+
+#searchContainer {
+justify-self: end;
+}
+
+/* Song grid */
+
+main {
+display: grid;
+grid-template-columns: repeat(3, auto);
+grid-template-rows: repeat(3, auto);
+gap: 100px;
+text-align: center;
+align-items: center;
+justify-items: center;
+padding: 24px;
+}
+
+main article {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+/* border: 1px solid #edf2f4; */
+/* background-color:  #468189 ; */
+/* background-color: #BFD7EA; */
+/* background-color: #191919; */
+background-color: #111;
+/* background-image:; */
+
+display: grid;
+grid-template-rows: 55% repeat(3, auto);
+grid-template-columns:auto;
+
+align-items:flex-end;
+justify-items: center;
+
+min-width:200px;
+width: 30vw;
+max-width: 350px;
+min-height: 150px;
+/* height: 30vw; */
+max-height: 210px;
+padding-bottom: 30%;
+padding-top: 5%;
+}
+
+main article div {
+position: absolute;
+z-index: 1;
+display: block;
+
+min-width:200px;
+width: 30vw;
+max-width: 350px;
+min-height: 200px;
+height: 30vw;
+max-height: 350px;
+
+-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(3px);
+}
+
+main article img {
+max-width: 100px;
+max-height: 100px;
+align-self: center;
+z-index: 2;
+}
+
+main article p {
+background-color: black;
+padding: 0px 0.5em;
+margin:0px;
+z-index: 2;
+}
+
+main article audio {
+display: block;
+width: 100%;
+z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+header {
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 0.5fr 0.1fr;
+}
+
+header hr {
+    grid-row: auto;
+    grid-column: auto;
+    width: 100%;
+}
+
+h1 {
+    justify-self: center;
+}
+
+#searchContainer {
+    justify-self: center;
+}
+
+
+main {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto);
+    gap: 30px;
+    padding: 0px;
+}
+
+main article {
+    width: 70%;
+    height: 150px;
+    padding-bottom: 20%;
+    padding-top: 30px;
+    grid-template-rows: 39%;
+
+
+
+}
+
+main article div {
+    width: 300px;
+    height: 3000px;
+}
+}
+
+
+
